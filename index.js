@@ -63,3 +63,24 @@
 // server.listen(3000, 'localhost', () => {
 //   console.log('Servidor en ejecución en http://localhost:3000/');
 // });
+
+// --------------------------------------
+// NPM
+
+// NPM (Node Package Manager) es el gestor de paquetes para Node.js.
+// - Con NPM, puedes descargar, instalar y administrar paquetes y dependencias de Node.js de forma sencilla.
+// Ejemplo:
+// npm install express // Instala el paquete "express"
+
+// ES MODULES
+
+// ES Modules es un estándar para trabajar con módulos en JavaScript.
+// - Proporciona una sintaxis más moderna y concisa para importar y exportar módulos en tu código.
+// Ejemplo:
+// import fs from 'fs'; // Importa el módulo fs (file system)
+
+// Diferencias en el import
+
+// En los módulos ES, en lugar de utilizar la función "require()", se utiliza la sintaxis "import" para importar módulos.
+// Ejemplo:
+// import fs from 'fs'; // Importa el módulo fs (file system)
