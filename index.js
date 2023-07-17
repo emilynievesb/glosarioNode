@@ -130,3 +130,75 @@
 //     console.log(data); // Muestra los datos recibidos en el cuerpo de la solicitud
 //   });
 // });
+
+// --------------------------------------
+// EXPRESS
+
+// Express es un framework web para Node.js que facilita la creación de aplicaciones y APIs web.
+// Ejemplo:
+// const express = require('express');
+// const app = express();
+// app.get('/', (req, res) => {
+//   res.send('¡Hola, mundo!');
+// });
+// app.listen(3000, () => {
+//   console.log('Servidor Express en ejecución en el puerto 3000');
+// });
+
+// Características de Express
+// - Enrutamiento sencillo y flexible: Express permite definir rutas y manejar solicitudes HTTP de forma clara y modular.
+// - Manejo de middleware: Express utiliza middleware para extender las funcionalidades de tu aplicación.
+// - Soporte para plantillas y motores de renderizado: Express facilita la generación de vistas HTML dinámicas utilizando plantillas y motores de renderizado.
+// - Integración sencilla con bases de datos y otros módulos: Express se integra con diversos módulos y frameworks populares, lo que simplifica el desarrollo de aplicaciones más completas.
+
+// Estructura básica de Express
+
+// Una estructura básica de una aplicación Express consta de los siguientes pasos:
+// 1. Importar el módulo Express: "const express = require('express')"
+// 2. Crear una instancia de la aplicación Express: "const app = express()"
+// 3. Definir las rutas y los manejadores de las solicitudes HTTP utilizando los métodos de Express, como "app.get()", "app.post()", etc.
+// 4. Iniciar el servidor Express utilizando el método "app.listen(port, callback)".
+
+// Montura de un servidor Express
+// - Después de definir las rutas y los manejadores, debes montar el servidor Express para que escuche las solicitudes entrantes.
+// - Puedes hacerlo utilizando el método "app.listen(port, callback)".
+// Ejemplo:
+// app.listen(3000, () => {
+//   console.log('Servidor Express en ejecución en el puerto 3000');
+// });
+
+// Parámetros y encabezados (headers)
+
+// En Express, puedes pasar parámetros en la URL o en la solicitud (request).
+// - Los parámetros de URL se capturan utilizando dos puntos (:) en la definición de la ruta.
+// Ejemplo:
+// app.get('/users/:id', (req, res) => {
+//   console.log(req.params.id); // Muestra el valor del parámetro "id" en la URL
+// });
+
+// Los encabezados (headers) son metadatos asociados a la solicitud o respuesta HTTP.
+// - Puedes leer o establecer los encabezados utilizando el objeto "request" o "response" respectivamente.
+// Ejemplo:
+// app.get('/', (req, res) => {
+//   console.log(req.headers['user-agent']); // Muestra el encabezado "User-Agent" de la solicitud
+//   res.send('¡Hola, mundo!');
+// });
+
+// Middleware
+
+// El middleware en Express es una función que se ejecuta en el flujo de la solicitud y respuesta.
+// - Puedes utilizar middleware para realizar acciones adicionales antes o después de manejar la ruta principal.
+// Ejemplos de middleware:
+// app.use(express.json()); // Middleware para analizar el cuerpo de la solicitud en formato JSON
+// app.use(express.static('public')); // Middleware para servir archivos estáticos desde el directorio "public"
+
+// Router
+
+// En Express, el router es un objeto que te permite definir rutas y agrupar controladores relacionados.
+// - El router te permite modularizar las rutas y el manejo de las mismas en tu aplicación Express.
+// Ejemplo:
+// const router = express.Router();
+// router.get('/', (req, res) => {
+//   res.send('¡Hola, mundo desde el router!');
+// });
+// app.use('/api', router);
