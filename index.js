@@ -84,3 +84,49 @@
 // En los módulos ES, en lugar de utilizar la función "require()", se utiliza la sintaxis "import" para importar módulos.
 // Ejemplo:
 // import fs from 'fs'; // Importa el módulo fs (file system)
+
+// --------------------------------------
+// NODEMON
+
+// Nodemon es una herramienta muy útil durante el desarrollo de aplicaciones Node.js.
+// - Nodemon se utiliza para reiniciar automáticamente la aplicación cuando se detectan cambios en los archivos.
+// Ejemplo:
+// nodemon archivo.js // Inicia la aplicación con Nodemon
+
+// REQUEST HTTP EN NODE
+
+// En Node.js, puedes realizar solicitudes HTTP a otros servidores utilizando módulos como "http", "axios" o "node-fetch".
+// Ejemplo utilizando el módulo "http":
+// const http = require('http');
+// http.get('http://api.example.com/data', (res) => {
+//   let data = '';
+//   res.on('data', (chunk) => {
+//     data += chunk;
+//   });
+//   res.on('end', () => {
+//     console.log(data); // Muestra la respuesta recibida
+//   });
+// });
+
+// Propiedades y métodos comunes en el objeto request
+
+// El objeto "request" en Node.js proporciona propiedades y métodos para manejar solicitudes HTTP entrantes.
+// Ejemplo:
+// http.createServer((req, res) => {
+//   console.log(req.url); // Muestra la URL de la solicitud
+//   console.log(req.method); // Muestra el método de la solicitud (GET, POST, etc.)
+// });
+
+// Obtención de datos con req.on
+
+// En Node.js, puedes utilizar el método "req.on" para suscribirte a eventos y manejar datos recibidos en el cuerpo de la solicitud HTTP.
+// Ejemplo:
+// http.createServer((req, res) => {
+//   let data = '';
+//   req.on('data', (chunk) => {
+//     data += chunk;
+//   });
+//   req.on('end', () => {
+//     console.log(data); // Muestra los datos recibidos en el cuerpo de la solicitud
+//   });
+// });
