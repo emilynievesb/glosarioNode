@@ -23,3 +23,43 @@
 // console.log(process.argv); // Output: ['node', 'archivo.js', 'argumento1', 'argumento2']
 
 // --------------------------------------
+// COMMONJS
+
+// CommonJS es una especificación de módulos para JavaScript que se utiliza en Node.js.
+// - Proporciona una forma estándar de definir y exportar módulos reutilizables en Node.js.
+// - El sistema de módulos CommonJS utiliza la función "require()" para importar módulos en un archivo.
+// Ejemplo:
+// const fs = require('fs'); // Importa el módulo fs (file system)
+
+// REQUIRE JSON
+
+// En Node.js, también puedes utilizar "require()" para importar archivos JSON.
+// - Puedes importar archivos JSON como módulos y acceder a sus datos en tu programa.
+// Ejemplo:
+// const data = require('./data.json'); // Importa el archivo JSON 'data.json'
+
+// REQUIRE FS
+
+// El módulo "fs" en Node.js proporciona funciones para trabajar con el sistema de archivos.
+// - Con el módulo "fs", puedes leer, escribir, actualizar y eliminar archivos en el sistema de archivos.
+// Ejemplo:
+// const fs = require('fs');
+// fs.readFile('archivo.txt', 'utf8', (err, data) => {
+//   if (err) throw err;
+//   console.log(data); // Muestra el contenido del archivo.txt
+// });
+
+// REQUIRE HTTP
+
+// El módulo "http" en Node.js permite crear un servidor HTTP y manejar solicitudes y respuestas HTTP.
+// - Con el módulo "http", puedes crear tu propio servidor web en Node.js.
+// Ejemplo:
+// const http = require('http');
+// const server = http.createServer((req, res) => {
+//   res.statusCode = 200;
+//   res.setHeader('Content-Type', 'text/plain');
+//   res.end('Hola, mundo!');
+// });
+// server.listen(3000, 'localhost', () => {
+//   console.log('Servidor en ejecución en http://localhost:3000/');
+// });
